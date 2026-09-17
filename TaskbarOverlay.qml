@@ -23,7 +23,7 @@ Item {
   property var shell: null
   property var manifest: null
 
-  readonly property string moduleName: "geovane.taskbar"
+  readonly property string moduleName: "geo.taskbar"
 
   property var svc: null
 

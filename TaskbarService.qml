@@ -19,7 +19,7 @@ Item {
   property var manifest: null
   property var barWidgetRegistry: null
 
-  readonly property string moduleName: "geovane.taskbar"
+  readonly property string moduleName: "geo.taskbar"
   readonly property string shelfWorkspace: "special:taskbar-minimized"
   readonly property string home: Quickshell.env("HOME")
   readonly property string stateHome: Quickshell.env("XDG_STATE_HOME") || (home + "/.local/state")

@@ -11,7 +11,7 @@ import qs.Ui
 BarWidget {
   id: root
 
-  moduleName: "geovane.taskbar"
+  moduleName: "geo.taskbar"
 
   // ensureService() can return null while the service singleton is still
   // mounting; retrying re-evaluates `svc` until it lands.
