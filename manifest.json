@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "id": "geovane.taskbar",
+  "name": "Windows 11 Taskbar",
+  "version": "0.1.0",
+  "author": "geovane",
+  "license": "MIT",
+  "description": "A Windows 11-style application taskbar bar widget: pinned and running apps grouped per application, hover thumbnails, and a right-click jump list.",
+  "kinds": ["bar-widget", "panel", "service"],
+  "keepLoaded": true,
+  "entryPoints": {
+    "barWidget": "TaskbarSpacer.qml",
+    "panel": "TaskbarOverlay.qml",
+    "service": "TaskbarService.qml"
+  },
+  "barWidget": {
+    "displayName": "Taskbar (Windows 11)",
+    "description": "Pinned + running applications, grouped per app, with hover previews and jump lists.",
+    "category": "Launchers",
+    "aliases": ["taskbar", "dock", "windows", "apps"],
+    "allowMultiple": false,
+    "defaultSection": "center",
+    "defaults": {
+      "previewDelay": 350,
+      "iconMinSize": 16,
+      "iconMaxSize": 28,
+      "magnify": true,
+      "magnifyRange": 3
+    },
+    "schema": [
+      {
+        "key": "iconMinSize",
+        "type": "number",
+        "label": "Smallest icon size (px)",
+        "description": "Resting size of an app icon when it is not magnified.",
+        "defaultValue": 16
+      },
+      {
+        "key": "iconMaxSize",
+        "type": "number",
+        "label": "Biggest icon size (px)",
+        "description": "Peak size the icon directly under the pointer grows to.",
+        "defaultValue": 28
+      },
+      {
+        "key": "magnify",
+        "type": "boolean",
+        "label": "Magnify on hover (wave)",
+        "description": "Grow icons near the pointer in a dock-style wave that can overflow the bar.",
+        "defaultValue": true
+      },
+      {
+        "key": "magnifyRange",
+        "type": "number",
+        "label": "Wave falloff range",
+        "description": "How many neighboring icons share the wave (icons).",
+        "defaultValue": 3
+      },
+      {
+        "key": "previewDelay",
+        "type": "number",
+        "label": "Hover preview delay (ms)",
+        "description": "How long to hover an app icon before its window preview appears.",
+        "defaultValue": 350
+      }
+    ]
+  }
+}
